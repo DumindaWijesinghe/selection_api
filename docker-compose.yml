@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  selection_api:
+    network_mode: host
+    build: .
+    ports:
+      - "2010:2010"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "9933:27017"

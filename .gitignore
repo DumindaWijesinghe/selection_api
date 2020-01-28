@@ -1,0 +1,8 @@
+node_modules
+.vscode
+npm-debug.log
+.serverless
+variables.env
+# should not commit .env to public repository
+# if it contains confidential information
+#.env
