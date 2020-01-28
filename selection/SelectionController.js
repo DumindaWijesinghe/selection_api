@@ -2,7 +2,9 @@ const express = require("express");
 const router = express.Router();
 const Selection = require("./Selection");
 
-// CREATES A NEW EMAIL
+/**
+ * Create a new selection or update an existing one.
+ */
 router.post("/", async function(req, res) {
   try {
     const { selectionId, authorId, selection } = req.body;
@@ -28,6 +30,9 @@ router.post("/", async function(req, res) {
   }
 });
 
+/**
+ * Fetch selection for a specific selectionId
+ */
 router.get("/:id", async function(req, res) {
   try {
 
